@@ -14,7 +14,7 @@ const ButtonLinkVariant = [
   'light',
   'dark',
 ] as const;
-const ButtonLinkSize = ['sm', 'base'] as const;
+const ButtonLinkSize = ['sm', 'base', 'lg'] as const;
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
@@ -55,6 +55,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           [
             size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'lg' && ['px-6 py-3', 'text-lg md:text-lg'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
@@ -102,6 +103,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className={clsxm([
               size === 'base' && 'mr-1',
               size === 'sm' && 'mr-1.5',
+              size === 'lg' && 'mr-5',
             ])}
           >
             <LeftIcon
@@ -109,6 +111,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                 [
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'lg' && 'md:text-md text-lg',
                 ],
                 leftIconClassName
               )}
@@ -121,6 +124,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className={clsxm([
               size === 'base' && 'ml-1',
               size === 'sm' && 'ml-1.5',
+              size === 'lg' && 'mr-5',
             ])}
           >
             <RightIcon
@@ -128,6 +132,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                 [
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'lg' && 'md:text-md text-lg',
                 ],
                 rightIconClassName
               )}

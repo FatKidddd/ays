@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['Roboto', ...defaultTheme.fontFamily.sans],
+        logo: 'Horta',
       },
       colors: {
         primary: {
